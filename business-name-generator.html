@@ -1,1 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Business Name Generator - AI Plain Guide</title>
+
+<meta name="description" content="Generate creative business name ideas using our free business name generator tool.">
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:white;
+    color:#111827;
+}
+
+
+/* Navbar */
+
+.navbar{
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:white;
+    border-bottom:1px solid #e5e7eb;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:700;
+    color:#2563eb;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#374151;
+    font-size:16px;
+}
+
+.nav-links a:hover{
+    color:#2563eb;
+}
+
+
+
+/* Tool Section */
+
+.container{
+    padding:60px 8%;
+    text-align:center;
+}
+
+
+.container h1{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+
+.container p{
+    color:#4b5563;
+    font-size:18px;
+    line-height:1.7;
+}
+
+
+.tool-box{
+
+    max-width:600px;
+    margin:40px auto;
+    padding:35px;
+    background:#f8fafc;
+    border-radius:15px;
+
+}
+
+
+input{
+
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border:1px solid #d1d5db;
+    border-radius:8px;
+    font-size:16px;
+
+}
+
+
+button{
+
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+
+}
+
+
+button:hover{
+
+    background:#1d4ed8;
+
+}
+
+
+#results{
+
+    margin-top:25px;
+    font-size:18px;
+    color:#111827;
+
+}
+
+
+
+/* Footer */
+
+footer{
+
+    margin-top:50px;
+    padding:35px 8%;
+    background:#111827;
+    color:white;
+    text-align:center;
+
+}
+
+
+footer a{
+
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+
+}
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<!-- Navbar -->
+
+<nav class="navbar">
+
+
+<div class="logo">
+AI Plain Guide
+</div>
+
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+<a href="business-name-generator.html">Business Tool</a>
+<a href="ai-tools.html">AI Tools</a>
+<a href="guides.html">Guides</a>
+<a href="blog.html">Blog</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+
+</nav>
+
+
+
+<!-- Tool -->
+
+<div class="container">
+
+
+<h1>Business Name Generator</h1>
+
+
+<p>
+Create unique and creative business name ideas for your startup, brand or online business.
+</p>
+
+
+
+<div class="tool-box">
+
+
+<input id="category" placeholder="Enter business category (e.g. Clothing, Restaurant)">
+
+
+<input id="keyword" placeholder="Enter keyword (e.g. Modern, Premium)">
+
+
+
+<button onclick="generateNames()">
+Generate Names
+</button>
+
+
+
+<div id="results"></div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<script>
+
+
+function generateNames(){
+
+
+let category=document.getElementById("category").value;
+
+let keyword=document.getElementById("keyword").value;
+
+
+if(category=="" || keyword==""){
+
+document.getElementById("results").innerHTML=
+"Please enter category and keyword.";
+
+return;
+
+}
+
+
+
+let names=[
+
+keyword+" "+category+" Hub",
+
+keyword+" "+category+" Studio",
+
+keyword+" "+category+" World",
+
+"Nova "+category,
+
+"Prime "+keyword,
+
+"Nexa "+category
+
+];
+
+
+document.getElementById("results").innerHTML=
+"<b>Suggested Names:</b><br><br>"+
+names.join("<br>");
+
+}
+
+
+</script>
+
+
+
+<!-- Footer -->
+
+
+<footer>
+
+
+<p>
+
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="disclaimer.html">Disclaimer</a>
+
+</p>
+
+
+<br>
+
+
+<p>
+© 2026 AI Plain Guide. All Rights Reserved.
+</p>
+
+
+</footer>
+
+
+
+</body>
+
+</html>
