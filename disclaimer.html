@@ -18,47 +18,73 @@
 }
 
 body{
-    background:#ffffff;
+    background:white;
     color:#111827;
 }
 
-.header{
-    padding:25px 8%;
+
+.navbar{
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:white;
     border-bottom:1px solid #e5e7eb;
 }
 
-.header h1{
+.logo{
+    font-size:26px;
+    font-weight:700;
     color:#2563eb;
 }
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#374151;
+    font-size:16px;
+}
+
+.nav-links a:hover{
+    color:#2563eb;
+}
+
 
 .container{
     padding:60px 8%;
     max-width:900px;
 }
 
-h2{
-    font-size:38px;
+.container h1{
+    font-size:40px;
     margin-bottom:25px;
 }
 
-h3{
-    margin-top:30px;
-    margin-bottom:10px;
-}
-
-p{
-    font-size:17px;
+.container p{
+    font-size:18px;
     color:#4b5563;
     line-height:1.8;
-    margin-bottom:15px;
+    margin-bottom:20px;
 }
+
 
 footer{
     margin-top:50px;
-    padding:30px;
+    padding:35px 8%;
     background:#111827;
     color:white;
     text-align:center;
+}
+
+footer a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
 }
 
 </style>
@@ -69,78 +95,62 @@ footer{
 <body>
 
 
-<div class="header">
-<h1>AI Plain Guide</h1>
+<nav class="navbar">
+
+<div class="logo">
+AI Plain Guide
 </div>
-<nav style="padding:20px 8%; border-bottom:1px solid #e5e7eb;">
 
-<a href="index.html" style="margin:10px; text-decoration:none;">Home</a>
+<div class="nav-links">
 
-<a href="ai-tools.html" style="margin:10px; text-decoration:none;">AI Tools</a>
+<a href="index.html">Home</a>
+<a href="ai-tools.html">AI Tools</a>
+<a href="guides.html">Guides</a>
+<a href="earning.html">Earning</a>
+<a href="blog.html">Blog</a>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
 
-<a href="guides.html" style="margin:10px; text-decoration:none;">Guides</a>
-
-<a href="earning.html" style="margin:10px; text-decoration:none;">Earning</a>
-
-<a href="blog.html" style="margin:10px; text-decoration:none;">Blog</a>
-
-<a href="about.html" style="margin:10px; text-decoration:none;">About Us</a>
-
-<a href="contact.html" style="margin:10px; text-decoration:none;">Contact</a>
+</div>
 
 </nav>
 
+
+
 <div class="container">
 
-<h2>Disclaimer</h2>
-
+<h1>Disclaimer</h1>
 
 <p>
 The information provided on AI Plain Guide is for educational and informational purposes only.
 </p>
 
-
-<h3>Accuracy of Information</h3>
-
 <p>
-We try our best to provide accurate and updated information, but we do not guarantee that all information will always be complete or error-free.
+We try to provide accurate information about AI tools and technology, but users should verify details before making decisions.
 </p>
 
-
-<h3>AI Tools and Recommendations</h3>
-
 <p>
-Our website may discuss AI tools, software, and online resources. Users should review the terms and conditions of any third-party service before using it.
+AI Plain Guide is not responsible for any loss or issues caused by the use of third-party tools or services.
 </p>
-
-
-<h3>External Links</h3>
-
-<p>
-Our website may contain links to third-party websites. We are not responsible for the content, privacy policies, or practices of external websites.
-</p>
-
-
-<h3>Changes to This Disclaimer</h3>
-
-<p>
-We may update this disclaimer from time to time to reflect changes in our website and services.
-</p>
-
-
-<h3>Contact Us</h3>
-
-<p>
-If you have any questions regarding this disclaimer, please contact us through our Contact page.
-</p>
-
 
 </div>
 
 
+
 <footer>
 
+<p>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="disclaimer.html">Disclaimer</a>
+</p>
+
+<br>
+
+<p>
 © 2026 AI Plain Guide. All Rights Reserved.
+</p>
 
 </footer>
 
