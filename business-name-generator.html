@@ -259,7 +259,7 @@ function generateNames(){
 
 let category = document.getElementById("category").value;
 let style = document.getElementById("style").value;
-let keyword = document.getElementById("keyword").value;
+let keyword = document.getElementById("keyword").value.trim();
 
 
 if(category=="" || style=="" || keyword==""){
@@ -272,21 +272,68 @@ return;
 }
 
 
-let names=[
-
-style+" "+keyword+" "+category,
-keyword+" "+category+" Studio",
-"Nova "+keyword,
-"Prime "+category,
-"Nexa "+keyword+" "+category,
-"Elite "+category
-
+let firstWords = [
+"Nova",
+"Nexa",
+"Velo",
+"Aura",
+"Luma",
+"Viva",
+"Zeno",
+"Orion",
+"Elite",
+"Prime"
 ];
 
 
+let endings = [
+"ora",
+"via",
+"ly",
+"ify",
+"za",
+"lio",
+"ora",
+"ex",
+"ara"
+];
+
+
+let names=[];
+
+
+for(let i=0; i<6; i++){
+
+let name =
+keyword.charAt(0).toUpperCase() +
+keyword.slice(1) +
+endings[i];
+
+names.push(name);
+
+}
+
+
+let styleWords = {
+
+"Luxury":["Aurevia","Velora","Grandelle","Luxora"],
+"Modern":["Nexora","Novexa","Vistara","Modiva"],
+"Creative":["Creativa","Ideora","Artiva","Visiona"],
+"Simple":["Purely","Easora","Simplya","Clearva"]
+
+};
+
+
+if(styleWords[style]){
+
+names = names.concat(styleWords[style]);
+
+}
+
+
 document.getElementById("results").innerHTML =
-"<b>Suggested Names:</b><br><br>" +
-names.join("<br>");
+"<b>Suggested Brand Names:</b><br><br>" +
+names.slice(0,10).join("<br>");
 
 }
 
