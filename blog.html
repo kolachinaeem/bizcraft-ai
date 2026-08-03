@@ -8,7 +8,7 @@
 
 <title>Blog - AI Plain Guide</title>
 
-<meta name="description" content="Read AI guides, technology updates and helpful articles from AI Plain Guide.">
+<meta name="description" content="Read AI articles, technology guides and useful digital tips.">
 
 <style>
 
@@ -20,33 +20,58 @@
 }
 
 body{
-    background:#ffffff;
+    background:white;
     color:#111827;
 }
 
-.header{
-    padding:25px 8%;
+
+.navbar{
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:white;
     border-bottom:1px solid #e5e7eb;
 }
 
-.header h1{
+.logo{
+    font-size:26px;
+    font-weight:700;
     color:#2563eb;
 }
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#374151;
+    font-size:16px;
+}
+
+.nav-links a:hover{
+    color:#2563eb;
+}
+
 
 .container{
     padding:60px 8%;
 }
 
-.container h2{
+.container h1{
     font-size:40px;
     margin-bottom:20px;
 }
 
 .container p{
-    color:#4b5563;
     font-size:18px;
-    line-height:1.7;
+    color:#4b5563;
+    line-height:1.8;
 }
+
 
 .posts{
     display:flex;
@@ -55,6 +80,7 @@ body{
     margin-top:40px;
 }
 
+
 .card{
     width:300px;
     padding:25px;
@@ -62,7 +88,7 @@ body{
     border-radius:15px;
 }
 
-.card h3{
+.card h2{
     color:#2563eb;
     margin-bottom:15px;
 }
@@ -71,20 +97,19 @@ body{
     font-size:16px;
 }
 
-.read{
-    display:inline-block;
-    margin-top:15px;
-    color:#2563eb;
-    text-decoration:none;
-    font-weight:bold;
-}
 
 footer{
     margin-top:50px;
-    padding:30px;
+    padding:35px 8%;
     background:#111827;
     color:white;
     text-align:center;
+}
+
+footer a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
 }
 
 </style>
@@ -95,33 +120,34 @@ footer{
 <body>
 
 
-<div class="header">
-<h1>AI Plain Guide</h1>
+<nav class="navbar">
+
+<div class="logo">
+AI Plain Guide
 </div>
-<nav style="padding:20px 8%; border-bottom:1px solid #e5e7eb;">
 
-<a href="index.html" style="margin:10px; text-decoration:none;">Home</a>
+<div class="nav-links">
 
-<a href="ai-tools.html" style="margin:10px; text-decoration:none;">AI Tools</a>
+<a href="index.html">Home</a>
+<a href="ai-tools.html">AI Tools</a>
+<a href="guides.html">Guides</a>
+<a href="earning.html">Earning</a>
+<a href="blog.html">Blog</a>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
 
-<a href="guides.html" style="margin:10px; text-decoration:none;">Guides</a>
-
-<a href="earning.html" style="margin:10px; text-decoration:none;">Earning</a>
-
-<a href="blog.html" style="margin:10px; text-decoration:none;">Blog</a>
-
-<a href="about.html" style="margin:10px; text-decoration:none;">About Us</a>
-
-<a href="contact.html" style="margin:10px; text-decoration:none;">Contact</a>
+</div>
 
 </nav>
 
+
+
 <div class="container">
 
-<h2>Latest AI Articles</h2>
+<h1>AI Plain Guide Blog</h1>
 
 <p>
-Explore AI guides, technology tips and useful information to improve your digital skills.
+Read helpful articles about artificial intelligence, technology and digital skills.
 </p>
 
 
@@ -130,46 +156,34 @@ Explore AI guides, technology tips and useful information to improve your digita
 
 <div class="card">
 
-<h3>Best AI Tools for Beginners</h3>
+<h2>Best AI Tools For Beginners</h2>
 
 <p>
-Discover useful AI tools that can help you save time and improve productivity.
+Discover useful AI tools and how they can improve your daily work.
 </p>
-
-<a class="read" href="#">
-Read More →
-</a>
 
 </div>
 
 
 <div class="card">
 
-<h3>How AI is Changing Work</h3>
+<h2>AI Future & Technology</h2>
 
 <p>
-Learn how artificial intelligence is transforming modern jobs and skills.
+Learn how artificial intelligence is changing the digital world.
 </p>
-
-<a class="read" href="#">
-Read More →
-</a>
 
 </div>
 
 
 <div class="card">
 
-<h3>AI Skills to Learn</h3>
+<h2>Learn AI Skills</h2>
 
 <p>
-Explore important AI skills that can help in the digital future.
+Explore skills that can help you understand and use AI better.
 </p>
 
-<a class="read" href="#">
-Read More →
-</a>
-
 </div>
 
 
@@ -177,11 +191,23 @@ Read More →
 
 
 </div>
+
 
 
 <footer>
 
+<p>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="disclaimer.html">Disclaimer</a>
+</p>
+
+<br>
+
+<p>
 © 2026 AI Plain Guide. All Rights Reserved.
+</p>
 
 </footer>
 
