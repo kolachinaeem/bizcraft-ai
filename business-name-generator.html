@@ -6,158 +6,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bizora - AI Business Idea Generator</title>
+<title>Bizora - AI Business Finder</title>
 
-<meta name="description" content="Generate creative business name ideas using our free Bizora - AI Business Idea Generator.">
+<meta name="description" content="Bizora AI helps you find profitable business ideas based on your skills, budget and goals.">
 
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-body{
-    background:white;
-    color:#111827;
-}
-
-
-/* Navbar */
-
-.navbar{
-    width:100%;
-    padding:20px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:white;
-    border-bottom:1px solid #e5e7eb;
-}
-
-.logo{
-    font-size:26px;
-    font-weight:700;
-    color:#2563eb;
-}
-
-.nav-links{
-    display:flex;
-    gap:25px;
-}
-
-.nav-links a{
-    text-decoration:none;
-    color:#374151;
-    font-size:16px;
-}
-
-.nav-links a:hover{
-    color:#2563eb;
-}
-
-
-
-/* Tool Section */
-
-.container{
-    padding:60px 8%;
-    text-align:center;
-}
-
-
-.container h1{
-    font-size:42px;
-    margin-bottom:20px;
-}
-
-
-.container p{
-    color:#4b5563;
-    font-size:18px;
-    line-height:1.7;
-}
-
-
-.tool-box{
-
-    max-width:600px;
-    margin:40px auto;
-    padding:35px;
-    background:#f8fafc;
-    border-radius:15px;
-
-}
-
-
-input{
-
-    width:100%;
-    padding:15px;
-    margin:10px 0;
-    border:1px solid #d1d5db;
-    border-radius:8px;
-    font-size:16px;
-
-}
-
-
-button{
-
-    background:#2563eb;
-    color:white;
-    border:none;
-    padding:15px 30px;
-    border-radius:8px;
-    cursor:pointer;
-    font-size:16px;
-
-}
-
-
-button:hover{
-
-    background:#1d4ed8;
-
-}
-
-
-#results{
-
-    margin-top:25px;
-    font-size:18px;
-    color:#111827;
-
-}
-
-
-
-/* Footer */
-
-footer{
-
-    margin-top:50px;
-    padding:35px 8%;
-    background:#111827;
-    color:white;
-    text-align:center;
-
-}
-
-
-footer a{
-
-    color:white;
-    text-decoration:none;
-    margin:0 10px;
-
-}
-
-</style>
-
+<link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -165,210 +18,617 @@ footer a{
 <body>
 
 
-<!-- Navbar -->
-
 <nav class="navbar">
 
-
 <div class="logo">
-AI Plain Guide
+<a href="index.html">AI Plain Guide</a>
 </div>
 
 
-<div class="nav-links">
+<div class="menu-toggle" id="menuToggle">
+☰
+</div>
 
+
+<ul class="nav-links" id="navLinks">
+
+<li>
 <a href="index.html">Home</a>
-<a href="business-name-generator.html">Bizora</a>
-<a href="ai-tools.html">AI Tools</a>
-<a href="guides.html">Guides</a>
-<a href="blog.html">Blog</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
+</li>
 
-</div>
+<li>
+<a href="business-name-generator.html" class="active">
+Bizora
+</a>
+</li>
 
+<li>
+<a href="ai-tools.html">
+AI Tools
+</a>
+</li>
+
+<li>
+<a href="blog.html">
+Blog
+</a>
+</li>
+
+<li>
+<a href="about.html">
+About
+</a>
+</li>
+
+<li>
+<a href="contact.html">
+Contact
+</a>
+</li>
+
+</ul>
 
 </nav>
 
 
 
-<!-- Tool -->
-
-<div class="container">
+<section class="hero">
 
 
-<h1>Business Name Generator</h1>
+<div class="hero-content">
+
+
+<h1>
+Find Your Perfect Business Idea With AI
+</h1>
 
 
 <p>
-Discover business ideas, brand names, competition insights and startup opportunities with Bizora AI.
+Bizora analyzes your budget, skills and goals to suggest smart business opportunities.
 </p>
 
 
-
-<div class="tool-box">
-
-
-<select id="category">
-
-<option value="">Select Business Category</option>
-<option value="Restaurant">Restaurant</option>
-<option value="Clothing">Clothing Brand</option>
-<option value="Technology">Tech Startup</option>
-<option value="Beauty">Beauty Brand</option>
-<option value="Agency">Digital Agency</option>
-<option value="Store">Online Store</option>
-
-</select>
-
-
-<select id="style">
-
-<option value="">Select Name Style</option>
-<option value="Modern">Modern</option>
-<option value="Luxury">Luxury</option>
-<option value="Creative">Creative</option>
-<option value="Simple">Simple</option>
-
-</select>
-
-
-<input id="keyword" placeholder="Enter keyword (e.g. Nova, Smart, Prime)">
-
-
-<button onclick="generateNames()">
-Generate Names
+<button onclick="scrollToTool()">
+Start Finding
 </button>
 
 
-<div id="results"></div>
-
-
 </div>
 
 
-</div>
+</section>
 
 
 
 
-<script>
+
+<section class="tool-section" id="bizora-tool">
 
 
-function generateNames(){
-
-let category = document.getElementById("category").value;
-let style = document.getElementById("style").value;
-let keyword = document.getElementById("keyword").value.trim();
+<div class="tool-card">
 
 
-if(category=="" || style=="" || keyword==""){
-
-document.getElementById("results").innerHTML =
-"Please select category, style and enter keyword.";
-
-return;
-
-}
-
-
-let firstWords = [
-"Nova",
-"Nexa",
-"Velo",
-"Aura",
-"Luma",
-"Viva",
-"Zeno",
-"Orion",
-"Elite",
-"Prime"
-];
-
-
-let endings = [
-"ora",
-"via",
-"ly",
-"ify",
-"za",
-"lio",
-"ora",
-"ex",
-"ara"
-];
-
-
-let names=[];
-
-
-for(let i=0; i<6; i++){
-
-let name =
-keyword.charAt(0).toUpperCase() +
-keyword.slice(1) +
-endings[i];
-
-names.push(name);
-
-}
-
-
-let styleWords = {
-
-"Luxury":["Aurevia","Velora","Grandelle","Luxora"],
-"Modern":["Nexora","Novexa","Vistara","Modiva"],
-"Creative":["Creativa","Ideora","Artiva","Visiona"],
-"Simple":["Purely","Easora","Simplya","Clearva"]
-
-};
-
-
-if(styleWords[style]){
-
-names = names.concat(styleWords[style]);
-
-}
-
-
-document.getElementById("results").innerHTML =
-"<b>Suggested Brand Names:</b><br><br>" +
-names.slice(0,10).join("<br>");
-
-}
-
-</script>
-
-
-
-<!-- Footer -->
-
-
-<footer>
+<h2>
+Bizora AI Business Finder
+</h2>
 
 
 <p>
-
-<a href="about.html">About Us</a>
-<a href="contact.html">Contact</a>
-<a href="privacy.html">Privacy Policy</a>
-<a href="disclaimer.html">Disclaimer</a>
-
+Answer a few questions and discover your best business match.
 </p>
 
 
-<br>
+
+
+<div class="form-group">
+
+<label>
+Your Budget
+</label>
+
+
+<select id="budget">
+
+
+<option value="">
+Select Budget
+</option>
+
+
+<option value="low">
+Under $100
+</option>
+
+
+<option value="medium">
+$100 - $1000
+</option>
+
+
+<option value="high">
+Above $1000
+</option>
+
+
+</select>
+
+</div>
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+Your Main Skill
+</label>
+
+
+<select id="skill">
+
+
+<option value="">
+Select Skill
+</option>
+
+
+<option value="writing">
+Writing
+</option>
+
+
+<option value="design">
+Graphic Design
+</option>
+
+
+<option value="marketing">
+Digital Marketing
+</option>
+
+
+<option value="coding">
+Programming
+</option>
+
+
+<option value="ai">
+AI Tools
+</option>
+
+
+<option value="video">
+Video Editing
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+Business Category
+</label>
+
+
+<select id="type">
+
+
+<option value="">
+Select Category
+</option>
+
+
+<option value="online">
+Online Business
+</option>
+
+
+<option value="offline">
+Offline Business
+</option>
+
+
+<option value="both">
+Online + Offline
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+Available Time
+</label>
+
+
+<select id="time">
+
+
+<option value="">
+Select Time
+</option>
+
+
+<option value="part">
+Part Time
+</option>
+
+
+<option value="full">
+Full Time
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+<button id="findBusinessBtn">
+
+Find My Business
+
+</button>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section class="results">
+
+
+<div class="result-box" id="resultBox">
+
+
+<h2>
+Your Business Recommendation
+</h2>
 
 
 <p>
+Fill the form above and click the button to get your AI suggestion.
+</p>
+
+
+</div>
+
+
+</section>
+
+  <section class="features">
+
+
+<h2>
+Why Choose Bizora?
+</h2>
+
+
+
+<div class="feature-container">
+
+
+<div class="feature-card">
+
+<h3>
+AI Suggestions
+</h3>
+
+<p>
+Get business ideas based on your personal skills, budget and available time.
+</p>
+
+</div>
+
+
+
+
+<div class="feature-card">
+
+<h3>
+Beginner Friendly
+</h3>
+
+<p>
+No business experience required. Bizora helps you find simple opportunities.
+</p>
+
+</div>
+
+
+
+
+<div class="feature-card">
+
+<h3>
+Growth Focused
+</h3>
+
+<p>
+Discover ideas that can grow into real online businesses.
+</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section class="business-examples">
+
+
+<h2>
+Popular Business Ideas
+</h2>
+
+
+
+<div class="business-grid">
+
+
+
+<div class="business-card">
+
+<h3>
+AI Content Agency
+</h3>
+
+<p>
+Create blogs, social media posts and marketing content using AI tools.
+</p>
+
+</div>
+
+
+
+
+<div class="business-card">
+
+<h3>
+Digital Products
+</h3>
+
+<p>
+Sell ebooks, templates, courses and downloadable products online.
+</p>
+
+</div>
+
+
+
+
+<div class="business-card">
+
+<h3>
+Freelancing
+</h3>
+
+<p>
+Offer writing, design, coding or marketing services worldwide.
+</p>
+
+</div>
+
+
+
+
+<div class="business-card">
+
+<h3>
+Affiliate Marketing
+</h3>
+
+<p>
+Promote useful products and earn commissions through referrals.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="faq">
+
+
+<h2>
+Frequently Asked Questions
+</h2>
+
+
+
+
+<div class="faq-item">
+
+<h3>
+What is Bizora?
+</h3>
+
+<p>
+Bizora is an AI-powered business idea finder that helps users discover suitable business opportunities.
+</p>
+
+</div>
+
+
+
+
+<div class="faq-item">
+
+<h3>
+Is Bizora free?
+</h3>
+
+<p>
+Yes, the basic business finder feature is free to use.
+</p>
+
+</div>
+
+
+
+
+<div class="faq-item">
+
+<h3>
+Can beginners use Bizora?
+</h3>
+
+<p>
+Yes. Bizora is designed for beginners who want to start online or offline businesses.
+</p>
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<section class="cta">
+
+
+<h2>
+Ready To Find Your Business Idea?
+</h2>
+
+
+<p>
+Start your journey with Bizora AI today.
+</p>
+
+
+
+<button onclick="scrollToTool()">
+
+Try Bizora Now
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+
+
+<footer class="footer">
+
+
+<div>
+
+
+<h3>
+AI Plain Guide
+</h3>
+
+
+<p>
+Helping people discover AI tools, online business ideas and digital opportunities.
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="footer-links">
+
+
+<a href="privacy.html">
+Privacy Policy
+</a>
+
+
+<a href="terms.html">
+Terms
+</a>
+
+
+<a href="contact.html">
+Contact
+</a>
+
+
+</div>
+
+
+
+
+
+<p>
+
 © 2026 AI Plain Guide. All Rights Reserved.
+
 </p>
+
 
 
 </footer>
 
 
 
+
+
+<script src="js/script.js"></script>
+
+
+
 </body>
 
-</html>
+</html>  
