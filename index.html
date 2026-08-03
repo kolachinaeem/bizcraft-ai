@@ -3,74 +3,191 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BizCraft AI</title>
+
+<title>AI Plain Guide - AI Tools & Online Earning</title>
 
 <style>
-body{
+*{
     margin:0;
-    font-family:Arial,sans-serif;
-    background:#f5f7fb;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-header{
-    background:#0f172a;
-    color:white;
-    padding:20px;
-    text-align:center;
+body{
+    background:#ffffff;
+    color:#111827;
+}
+
+.navbar{
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:white;
+    border-bottom:1px solid #e5e7eb;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:700;
+    color:#2563eb;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#374151;
+    font-size:16px;
+}
+
+.nav-links a:hover{
+    color:#2563eb;
 }
 
 .hero{
-    text-align:center;
-    padding:80px 20px;
+    min-height:85vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:60px 8%;
+    background:linear-gradient(135deg,#eff6ff,#ffffff);
+}
+
+.hero-text{
+    max-width:600px;
 }
 
 .hero h1{
-    font-size:48px;
-    color:#0f172a;
+    font-size:55px;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#2563eb;
 }
 
 .hero p{
     font-size:20px;
-    color:#555;
+    color:#4b5563;
+    line-height:1.6;
+    margin-bottom:35px;
 }
 
 .btn{
     display:inline-block;
-    margin-top:20px;
     padding:15px 30px;
     background:#2563eb;
     color:white;
     text-decoration:none;
     border-radius:8px;
-    font-size:18px;
+    font-weight:bold;
 }
 
-footer{
-    text-align:center;
-    padding:20px;
-    background:#0f172a;
-    color:white;
-    margin-top:80px;
+.btn:hover{
+    background:#1d4ed8;
 }
+
+.hero-box{
+    width:350px;
+    height:350px;
+    background:#2563eb;
+    border-radius:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:80px;
+}
+
+@media(max-width:768px){
+
+.navbar{
+    padding:20px 5%;
+}
+
+.nav-links{
+    display:none;
+}
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+    padding:50px 5%;
+}
+
+.hero h1{
+    font-size:38px;
+}
+
+.hero p{
+    font-size:17px;
+}
+
+.hero-box{
+    margin-top:40px;
+    width:250px;
+    height:250px;
+    font-size:60px;
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
 
-<header>
-<h2>🚀 BizCraft AI</h2>
-</header>
+<nav class="navbar">
+
+<div class="logo">
+AI Plain Guide
+</div>
+
+<div class="nav-links">
+<a href="#">Home</a>
+<a href="#">AI Tools</a>
+<a href="#">Guides</a>
+<a href="#">Earning</a>
+<a href="#">Contact</a>
+</div>
+
+</nav>
+
 
 <section class="hero">
-<h1>AI Business Toolkit</h1>
-<p>Discover the best AI tools to grow your business and boost productivity.</p>
 
-<a href="#" class="btn">Explore Tools</a>
+<div class="hero-text">
+
+<h1>
+Discover The Best <span>AI Tools</span> & Online Earning Methods
+</h1>
+
+<p>
+Learn powerful AI tools, productivity hacks, and online earning strategies with simple guides made for everyone.
+</p>
+
+<a class="btn" href="#">
+Explore AI Tools
+</a>
+
+</div>
+
+
+<div class="hero-box">
+AI
+</div>
+
+
 </section>
 
-<footer>
-© 2026 BizCraft AI. All Rights Reserved.
-</footer>
 
 </body>
 </html>
